@@ -1,5 +1,4 @@
 {
-  "title": "DeyeCloud",
   "config": {
     "step": {
       "user": {
@@ -17,9 +16,25 @@
     },
     "error": {
       "auth_failed": "Xác thực thất bại. Vui lòng kiểm tra tên đăng nhập/email, mật khẩu, App ID, App Secret và Base URL."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Cấu hình DeyeCloud",
+        "description": "Cập nhật thông tin DeyeCloud OpenAPI.",
+        "data": {
+          "username": "Tên đăng nhập hoặc email",
+          "password": "Mật khẩu",
+          "app_id": "App ID",
+          "app_secret": "App Secret",
+          "base_url": "Base URL",
+          "start_month": "Tháng bắt đầu"
+        }
+      }
     },
-    "abort": {
-      "already_configured": "Tài khoản DeyeCloud này đã được cấu hình."
+    "error": {
+      "auth_failed": "Xác thực thất bại. Vui lòng kiểm tra tên đăng nhập/email, mật khẩu, App ID, App Secret và Base URL."
     }
   }
 }
