@@ -1,12 +1,14 @@
 {
   "domain": "deyecloud",
-  "name": "Fuuuuckyou Tony Tong Deye Cloud",
-  "version": "1.0.9",
+  "name": "Deye Cloud",
+  "version": "1.0.12",
   "documentation": "https://github.com/heavenknows1978/hass-deyecloud",
   "dependencies": [],
-  "codeowners": ["@heavenknows1978"],
+  "codeowners": [
+    "@heavenknows1978"
+  ],
   "config_flow": true,
-  "requirements": ["aiofiles"],
+  "requirements": [],
   "iot_class": "cloud_polling",
   "homeassistant": "2022.5.0"
 }

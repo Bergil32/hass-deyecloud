@@ -59,6 +59,19 @@ def _sha256(password: str) -> str:
     return hashlib.sha256(password.encode("utf-8")).hexdigest().lower()
 
 
+def _build_login_payload(login: str) -> dict[str, str]:
+    """Build DeyeCloud login payload using either email or username.
+
+    DeyeCloud token API supports login by mobile, email, or username. This
+    integration has a single username/login config field, so choose the payload
+    key based on the entered value.
+    """
+    login = login.strip()
+    if "@" in login:
+        return {"email": login}
+    return {"username": login}
+
+
 def _as_float_or_original(value):
     """Return numeric values as float, otherwise return original value."""
     if value is None:
@@ -109,7 +122,7 @@ async def _async_get_token(session: aiohttp.ClientSession, username, password, a
     _LOGGER.debug("Requesting token from API: %s", url)
     payload = {
         "appSecret": app_secret,
-        "username": username,
+        **_build_login_payload(username),
         "password": _sha256(password),
     }
 
