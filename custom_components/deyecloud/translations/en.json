@@ -1,10 +1,40 @@
 {
-  "title": "DeyeCloud",
   "config": {
     "step": {
       "user": {
-        "title": "Connect to DeyeCloud"
+        "title": "Connect to DeyeCloud",
+        "description": "Enter your DeyeCloud OpenAPI credentials.",
+        "data": {
+          "username": "Username or email",
+          "password": "Password",
+          "app_id": "App ID",
+          "app_secret": "App Secret",
+          "base_url": "Base URL",
+          "start_month": "Start month"
+        }
       }
+    },
+    "error": {
+      "auth_failed": "Authentication failed. Please check your username/email, password, App ID, App Secret, and Base URL."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Configure DeyeCloud",
+        "description": "Update your DeyeCloud OpenAPI credentials.",
+        "data": {
+          "username": "Username or email",
+          "password": "Password",
+          "app_id": "App ID",
+          "app_secret": "App Secret",
+          "base_url": "Base URL",
+          "start_month": "Start month"
+        }
+      }
+    },
+    "error": {
+      "auth_failed": "Authentication failed. Please check your username/email, password, App ID, App Secret, and Base URL."
     }
   }
 }
